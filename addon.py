@@ -100,6 +100,7 @@ def show_stations(genre_id):
 def resolve_play_url(station_id):
     stream_url = api.resolve(station_id)
     if stream_url:
+        xbmc.sleep(1000)
         plugin.set_resolved_url(stream_url)
 
 
